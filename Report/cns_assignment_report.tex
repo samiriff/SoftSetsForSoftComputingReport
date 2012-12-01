@@ -55,7 +55,7 @@ showstringspaces=false
 \large{Department of Computer Science}\\[1cm]
 \textsc{\Large }\\[0.5cm]
 
-\includegraphics[scale=1]{proj.png}\\[1cm]    
+\includegraphics[scale=1]{softee.png}\\[1cm]    
 
 % Title
 \HRule \\[0.4cm]
@@ -113,9 +113,51 @@ co-exist and can be used consistently to solve real
 world problems.
 
 
+\section{Soft Computing}
+\subsection{Definition}
+Soft computing differs from conventional (hard) computing in that, unlike hard computing, it is tolerant of imprecision, uncertainty, partial truth, and approximation. In effect, the role model for soft computing is the human mind. The guiding principle of soft computing is: Exploit the tolerance for imprecision, uncertainty, partial truth, and approximation to achieve tractability, robustness and low solution cost. The basic ideas underlying soft computing in its current incarnation have links to many earlier influences, among them Zadeh's 1965 paper on fuzzy sets; the 1973 paper on the analysis of complex systems and decision processes; and the 1979 report (1981 paper) on possibility theory and soft data analysis. The inclusion of neural computing and genetic computing in soft computing came at a later point.
+
+\subsection{Words of Wisdom}
+\textit{"Basically, soft computing is not a homogeneous body of concepts and techniques. Rather, it is a partnership of distinct methods that in one way or another conform to its guiding principle. At this juncture, the dominant aim of soft computing is to exploit the tolerance for imprecision and uncertainty to achieve tractability, robustness and low solutions cost. The principal constituents of soft computing are fuzzy logic, neurocomputing, and probabilistic reasoning, with the latter subsuming genetic algorithms, belief networks, chaotic systems, and parts of learning theory. In the partnership of fuzzy logic, neurocomputing, and probabilistic reasoning, fuzzy logic is mainly concerned with imprecision and approximate reasoning; neurocomputing with learning and curve-fitting; and probabilistic reasoning with uncertainty and belief propagation".}
+
+\subsection{Components of Soft Computing}
+At this juncture, the principal constituents of Soft Computing (SC) are Fuzzy Logic (FL), Neural Computing (NC), Evolutionary Computation (EC) Machine Learning (ML) and Probabilistic Reasoning (PR), with the latter subsuming belief networks, chaos theory and parts of learning theory. What is important to note is that soft computing is not a melange. Rather, it is a partnership in which each of the partners contributes a distinct methodology for addressing problems in its domain. In this perspective, the principal constituent methodologies in SC are complementary rather than competitive. Furthermore, soft computing may be viewed as a foundation component for the emerging field of conceptual intelligence.
+
+Components of soft computing include:
+\begin{itemize}
+
+\item{Neural networks (NN)}
+\item{Fuzzy logics (FL)}
+\item{Evolutionary computation (EC), including:}
+\begin{itemize}
+\item{Evolutionary algorithms}
+\begin{itemize}
+\item{Genetic algorithms}
+\item{Differential evolution}
+\end{itemize}
+\item{Metaheuristic and Swarm Intelligence}
+\begin{itemize}
+\item{Ant colony optimization}
+\item{Bees algorithms}
+\item{Bat algorithm}
+\item{Cuckoo search}
+\item{Harmony search}
+\item{Firefly algorithm}
+\item{Artificial immune systems}
+\item{Particle swarm optimization}
+\end{itemize}
+\end{itemize}
+\item{Ideas about probability including Bayesian networks}
+\item{Chaos theory}
+\item{Perceptron}
+
+\end{itemize}
+Generally speaking, soft computing techniques resemble biological processes more closely than traditional techniques, which are largely based on formal logical systems, such as sentential logic and predicate logic, or rely heavily on computer-aided numerical analysis (as in finite element analysis). Soft computing techniques are intended to complement each other.
+Unlike hard computing schemes, which strive for exactness and full truth, soft computing techniques exploit the given tolerance of imprecision, partial truth, and uncertainty for a particular problem. Another common contrast comes from the observation that inductive reasoning plays a larger role in soft computing than in hard computing.
 
 
-\section{Definitions}
+
+\section{Soft Set Theory}
 
 \subsection{Structured Subsets}
 According to the authors of this oh so marvelous paper, ideal membership functions for real world fuzzy sets are made from elastic material, because fuzzy sets should be able to tolerate certain
@@ -190,12 +232,74 @@ characteristic function of a classical crispy set. If M is a
 unit interval [0, 1], then FX is the membership function of a
 classical fuzzy set.
 
-Let be a collection of fuzzy sets on U. Each fuzzy set is defined by a neighborhood (may be a singleton) in the membership function space;
+Let F be a collection of fuzzy sets on U. Each fuzzy set is defined by a neighborhood (may be a singleton) in the membership function space; let Col be a neighborhood system. MF(U) is the total union of all membership functions representing F, namely the union of members in Col :
+MF(U) = \begin{math} \bigcup \end{math} Col \\
+Col is a neighborhood system on MF(U).
+
+
+\subsection{Types of Soft Sets}
+Depending on the nature of Col, we have various types of fuzzy sets (sofsets).
+\begin{enumerate}
+\item{\textbf{W-Sofset} - Weighted Soft Set (Mathematical Soft
+Set or Quantitative Soft Set) occur when Col consists of singletons, i.e., the membership function space of a given fuzzy set consists only of a single set. Every membership function is treated as a characteristic function of a soft set. This is the naive definition of fuzzy sets.}
+\item{\textbf{F-Sofset} - Finite-multi Soft Set occurs when Col consists of
+finite sets.}
+\item{\textbf{P-Sofset} - Partitioned Soft Set, occurs when Col forms a crispy
+partition. The space of membership functions is partitioned into
+equivalence classes.}
+\item{\textbf{B-Sofset} - Basic Neighborhood Soft Set occurs when Col
+forms a basic neighborhood system (i.e., the
+neighborhood system is defined by a binary relation). Basic neighborhoods are geometric view of binary relation. Two membership functions, FX and GX, (for the same soft set X) measure theoretically near, if for any given $\varepsilon >$ 0,
+$\Vert FX(X) - GX(X) \Vert < \varepsilon$
+}
+
+\item{\textbf{C-Sofset} - Covering Soft Set occurs when Col forms a
+covering.}
+
+\item{\textbf{N-Sofset} - Neighborhood Soft Set (Real World Soft
+Set or Qualitative Soft Set) occurs when if forms a
+neighborhood system.}
+
+\end{enumerate}
+
+Note that a W-Sofset is a special case of an F-Sofset, which is a special case of a P-Sofset, which is a special case of a B-Sofset, which is a special case of an N-Sofset.
 
 
 
+\subsection{One Fuzzy Set - Several Membership Functions}
+As of December 1, 2012 AD, there are two conflicting notions, which haven't been resolved yet:
+\begin{enumerate}
+\item{A Fuzzy set is defined by one and only one membership function, as in W-Sofsets. Since only one membership function is permitted for each fuzzy set, membership functions have to be selected so carefully
+that they are closed under extended operations}
+\item{A Fuzzy set could have several membership functions. The method of selection of membership functions is more relaxed.}
+\end{enumerate}
 
-
+\subsection{One Membership Function - Several Fuzzy Sets}
+As of December 1, 2012 AD, there are two conflicting notions:
+\begin{enumerate}
+\item{A membership function can represent at most
+one fuzzy set. So the space MF(U) of membership
+functions is partitioned into equivalence classes. Each
+equivalence class represents one and only one fuzzy set.
+Such fuzzy sets are P-sofsets. Mathematically, this
+view is the most elegant one. Unfortunately, it may not
+be realistic. One will realize, however after a moment
+of reflection, that MF(U) may be a “continuous” family
+of real valued functions. Very unlikely there is a natural
+partition on such MF(U)’s. We are forced to accept
+more general and realistic view. Of course, there are
+situations in which MF(U) has very natural partitions.}
+\item{a real world fuzzy set should be defined by an elastic
+membership function. Mathematically, one can express
+such an elastic membership function by a set of
+membership functions that are very “near” to each other.
+In other words, they belong to the same neighborhood.
+In general, is a neighborhood system, not a crispy
+partition. Overlapping does occur in neighborhoods. So
+a membership function could lie in two neighborhoods.
+In other words, a membership function may represent
+two fuzzy sets. Such fuzzy sets are N-sofsets.}
+\end{enumerate}
 
 
 The developments of various generalized set theories form a
@@ -204,105 +308,14 @@ foundation for soft computing. This paper is one of our
 attempt to provide a solid set theory for soft computing.
 
 
-\subsection{How Public-key Cryptosystems Work}
-The distinguishing technique used in public-key cryptography is the use of asymmetric key algorithms, where the key used to encrypt a message is not the same as the key used to decrypt it. Each user has a pair of cryptographic keys - a public encryption key and a private decryption key. The publicly available encrypting-key is distributed, while the private decrypting-key is kept secret. Messages are encrypted with the recipient's public key, and can be decrypted only with the corresponding private key. The keys are related mathematically, but the parameters are chosen so that determining the private key from the public key is either impossible or prohibitively expensive. 
-
-
-\subsection{Schmidt-Samoa Public-key Cryptosystem}
-The Schmidt-Samoa cryptosystem is an asymmetric cryptographic technique, whose security, like Rabin and RSA depends on the difficulty of integer factorization.
-\begin{itemize}
-\item{Key generation}
-\begin{itemize}
-\item{}Choose two large distinct primes p and q and compute $N = p^2 \times q$
-\item{}Compute $d = N-1$ mod $lcm(p - 1, q - 1)$
-\item{}Now N is the public key and d is the private key.
- \end{itemize}
-
-
-\item{\textbf{Encryption}} - 
-To encrypt a message m we compute the cipher text as $c = m^N mod N$
- 
-\item{\textbf{Decryption}}
-To decrypt a cipher text c we compute the plaintext as $m = c^d mod (p\times q)$ which like for Rabin and RSA can be computed with the Chinese remainder theorem.
-
-
-
-\item{\textbf{Security}} - 
-The algorithm, like Rabin, is based on the difficulty of factoring the modulus N, which is a distinct advantage over RSA. That is, it can be shown that if there exists an algorithm that can decrypt arbitrary messages, then this algorithm can be used to factor N.
-\end{itemize}
-
-\section{Previous Cryptosystems}
-\subsection{RSA Cryptosystem}
-RSA stands for Ron Rivest, Adi Shamir and Leonard Adleman, who first publicly described it in 1977.
-
-\begin{itemize}
-\item{\textbf{Key Generation}}
-\begin{itemize}
-\item{}Let N = $p\times q$ be a product of two prime numbers
-\item{}Compute $\varphi(n) = (p – 1)(q – 1)$, where $\varphi$ is Euler's totient function.
-\item{}Choose an integer e such that $1 \leq e \leq \varphi(n)$ and greatest common divisor of (e, $\varphi(n)$) = 1; i.e., e and $\varphi(n)$ are co-prime.
-\item{}Determine d as: d = $e^{-1}$ (mod $\varphi(n)$), d is the multiplicative inverse of e mod $\varphi(n)$.
- \end{itemize}
-
-\item{\textbf{Encryption}}:    Let M be a message, and c the ciphertext. Then,
-        	$c = m^e (mod n)$
-\item{\textbf{Decryption}}:  $m = c^d (mod n)$
-By construction, $d^e= 1$ mod $\varphi(n)$. The public key consists of the modulus n and the public (or encryption) exponent e. The private key consists of the modulus n and the private (or decryption) exponent d which must be kept secret.
-\end{itemize}
-\subsection{Rabin\'s Cryptosystem}
-In 1979, Michael Rabin suggested a variant of RSA with public-key exponent 2, which he showed to be as secure as factoring.
-\begin{itemize}
-\item{\textbf{Key Generation}}
-\begin{itemize}
-\item{}Choose two large distinct primes p and q.
-\item{}Let n=pq. Then n is the public key. The primes p and q are the private key
- \end{itemize}
-
-\item{\textbf{Encryption}}:  For the encryption, only the public key n is used. The process follows -
-Let  P = \{0,...,n-1\} be the plaintext space (consisting of numbers) and $m \in P$ be the plaintext. Now the ciphertext  is determined by $c = m^2 $(mod n).
-
-
-c is the quadratic remainder of the square of the plaintext, modulo the key-number n.
-\item{\textbf{Decryption}}:
-To decode the ciphertext, the private keys are necessary. The process follows:
-If c and r are known, the plaintext is then $m \in \{0,$...,$n-1$\} with $m^2=c$ (mod r). For a composite r (that is, like the Rabin algorithm's ) there is no efficient method known for the finding of m. If, however r is prime (as are p and q in the Rabin algorithm), the Chinese remainder theorem can be applied to solve for m.
-
-Thus the square roots
-$ m_p = \sqrt{c}$ mod p
-and
-$ m_q = \sqrt{c}$ mod q must be calculated
-\end{itemize}
-
-
-\section{Implementation}
-\lstinputlisting[language=Java]{Schmidt_Samoa_Encryptor.java}
-%\begin{figure}[h!]
-%  \centering
-%   \includegraphics[scale=1.0]{schmidt_field.png}
-%  \caption{Experimental Results}
-%\end{figure}
-%
-%\begin{figure}[h!]
-%  \centering
-%   \includegraphics[scale=1.0]{computeN.png}
-%  \caption{Experimental Results}
-%\end{figure}
-%
-%\begin{figure}[h!]
-%  \centering
-%   \includegraphics[scale=1.0]{correctValue.png}
-%  \caption{Experimental Results}
-%\end{figure}
-
-
-
-%\begin{figure}[h!]
-%  \centering
-%   \includegraphics[scale=0.50]{watlas.png}
-%  \caption{A small portion of the Watershed Atlas for British Columbia that was
-%developed using an IBM Informix ORDBMS.}
-%\end{figure}
-
+\section{Conclusion}
+In the literature of fuzzy sets, there is no “unified”
+view on the relationship between fuzzy sets and
+membership functions. Some authors treat membership
+functions as characteristic functions. In other words,
+one fuzzy set has one and only one membership
+function, in our terminology, a W-sofset. Some do not
+share this view so they can f*** off.
 
 \begin{thebibliography}{9}
 \bibitem{pap}
