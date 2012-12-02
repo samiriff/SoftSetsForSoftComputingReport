@@ -1,4 +1,4 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1}{History}{}% 1
 \BOOKMARK [1][-]{section.2}{Soft Computing}{}% 2
 \BOOKMARK [2][-]{section*.1}{Definition}{section.2}% 3
 \BOOKMARK [2][-]{section*.2}{Words of Wisdom}{section.2}% 4
@@ -12,5 +12,9 @@
 \BOOKMARK [2][-]{section*.9}{Types of Soft Sets}{section.3}% 12
 \BOOKMARK [2][-]{section*.10}{One Fuzzy Set - Several Membership Functions}{section.3}% 13
 \BOOKMARK [2][-]{section*.11}{One Membership Function - Several Fuzzy Sets}{section.3}% 14
-\BOOKMARK [1][-]{section.4}{Conclusion}{}% 15
-\BOOKMARK [1][-]{section.5}{Screenshots}{}% 16
+\BOOKMARK [1][-]{section.4}{Application of Soft sets in Soft computing}{}% 15
+\BOOKMARK [2][-]{section*.12}{Tabular Representation of soft set}{section.4}% 16
+\BOOKMARK [2][-]{section*.13}{Reduct-Table for a Soft Set}{section.4}% 17
+\BOOKMARK [2][-]{section*.14}{Choice Value for an Object hi}{section.4}% 18
+\BOOKMARK [2][-]{section*.15}{Algorithm for Selection for House}{section.4}% 19
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 20

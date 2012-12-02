@@ -40,6 +40,7 @@ showstringspaces=false
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
+\date{}
 \title{}
 \begin{document}
 \maketitle
@@ -87,7 +88,7 @@ Satvik \textsc{N} [1RV09CS095]\\
 \maketitle
 \setcounter{secnumdepth}{1}
 
-\section{Introduction}
+\section{History}
 Molodtsov initiated the concept of soft set as a new mathematical tool for dealing with uncertainties. Most of our traditional tools for formal modeling, reasoning and computing are crisp, deterministic and precise in character. However, there are many complicated problems in economics,
 engineering, environment, social science, medical science etc.
 that involve uncertainties. The Theory of Probability, Theory of
@@ -115,7 +116,7 @@ world problems.
 
 \section{Soft Computing}
 \subsection{Definition}
-Soft computing differs from conventional (hard) computing in that, unlike hard computing, it is tolerant of imprecision, uncertainty, partial truth, and approximation. In effect, the role model for soft computing is the human mind. The guiding principle of soft computing is: Exploit the tolerance for imprecision, uncertainty, partial truth, and approximation to achieve tractability, robustness and low solution cost. The basic ideas underlying soft computing in its current incarnation have links to many earlier influences, among them Zadeh's 1965 paper on fuzzy sets; the 1973 paper on the analysis of complex systems and decision processes; and the 1979 report (1981 paper) on possibility theory and soft data analysis. The inclusion of neural computing and genetic computing in soft computing came at a later point.
+Soft computing differs from conventional (hard) computing in that, unlike hard computing, it is tolerant of imprecision, uncertainty, partial truth, and approximation. In effect, the role model for soft computing is the human mind. The guiding principle of soft computing is: Exploit the tolerance for imprecision, uncertainty, partial truth, and approximation to achieve tractability, robustness and low solution cost. The basic ideas underlying soft computing in its current incarnation have links to many earlier influences, among them Zadeh's 1965 paper on fuzzy sets; the 1973 paper on the analysis of complex systems and decision processes; and the 1979 report (1981 paper) on possibility theory and soft data analysis.
 
 \subsection{Words of Wisdom}
 \textit{"Basically, soft computing is not a homogeneous body of concepts and techniques. Rather, it is a partnership of distinct methods that in one way or another conform to its guiding principle. At this juncture, the dominant aim of soft computing is to exploit the tolerance for imprecision and uncertainty to achieve tractability, robustness and low solutions cost. The principal constituents of soft computing are fuzzy logic, neurocomputing, and probabilistic reasoning, with the latter subsuming genetic algorithms, belief networks, chaotic systems, and parts of learning theory. In the partnership of fuzzy logic, neurocomputing, and probabilistic reasoning, fuzzy logic is mainly concerned with imprecision and approximate reasoning; neurocomputing with learning and curve-fitting; and probabilistic reasoning with uncertainty and belief propagation".}
@@ -153,6 +154,11 @@ Components of soft computing include:
 
 \end{itemize}
 Generally speaking, soft computing techniques resemble biological processes more closely than traditional techniques, which are largely based on formal logical systems, such as sentential logic and predicate logic, or rely heavily on computer-aided numerical analysis (as in finite element analysis). Soft computing techniques are intended to complement each other.
+\begin{figure}[h]
+  \centering
+   \includegraphics[scale=1.0]{soft_computing.png}
+ % \caption{Encryption using the Schmidt-Samoa algorithm}
+\end{figure}
 Unlike hard computing schemes, which strive for exactness and full truth, soft computing techniques exploit the given tolerance of imprecision, partial truth, and uncertainty for a particular problem. Another common contrast comes from the observation that inductive reasoning plays a larger role in soft computing than in hard computing.
 
 
@@ -160,7 +166,7 @@ Unlike hard computing schemes, which strive for exactness and full truth, soft c
 \section{Soft Set Theory}
 
 \subsection{Structured Subsets}
-According to the authors of this oh so marvelous paper, ideal membership functions for real world fuzzy sets are made from elastic material, because fuzzy sets should be able to tolerate certain
+According to the authors of [1], ideal membership functions for real world fuzzy sets are made from elastic material, because fuzzy sets should be able to tolerate certain
 amount of perturbation or stretching. Mathematically, each perturbation is a new function, that consists of a set of functions,
 each of which can be continuously stretched into
 another function. Such a set of functions is a highly
@@ -178,13 +184,13 @@ fuzzified structures in the membership function space. Soft sets are intended to
 
 
 \subsection{Neighbourhood Systems}
-It is an abstraction of “near” or “negligible distances” in
+It is an abstraction of ``near" or ``negligible distances" in
 geometry. A neighborhood system is an association that
 assigns each datum a list of data that may or may not
 contain the datum. It is natural and implementable, and used for  approximate retrieval in databases and approximate reasoning in knowledge bases
 
 The central notion here is neighborhood systems. It
-is an abstraction of “near” or “negligible distances” in
+is an abstraction of ``near" or ``negligible distances" in
 geometry. A neighborhood system is an association that
 assigns each datum a list of data that may or may not
 contain the datum. It is natural and implementable. So current and soft mathematics can
@@ -194,7 +200,11 @@ world problems.
 Neighborhood systems express the semantics of
 nearby spaces. Let p be an object (or datum) in the universe or
 space X. 
-
+\begin{figure}[h!]
+  \centering
+   \includegraphics[scale=0.50]{p.png}
+ % \caption{Encryption using the Schmidt-Samoa algorithm}
+\end{figure}
 \begin{itemize}
 \item{A neighborhood, denoted by N(p), or simply N,
 of p is a non-empty subset of X, which may or
@@ -267,7 +277,7 @@ Note that a W-Sofset is a special case of an F-Sofset, which is a special case o
 
 
 \subsection{One Fuzzy Set - Several Membership Functions}
-As of December 1, 2012 AD, there are two conflicting notions, which haven't been resolved yet:
+There are two conflicting notions:
 \begin{enumerate}
 \item{A Fuzzy set is defined by one and only one membership function, as in W-Sofsets. Since only one membership function is permitted for each fuzzy set, membership functions have to be selected so carefully
 that they are closed under extended operations}
@@ -306,6 +316,90 @@ The developments of various generalized set theories form a
 beginning of a "soft mathematics” and may provide a
 foundation for soft computing. This paper is one of our
 attempt to provide a solid set theory for soft computing.
+\section{Application of Soft sets in Soft computing}
+
+Molodtsov presented some applications of the soft set theory in several directions viz.
+study of smoothness of functions , game theory, operations research, Riemann-integration, Perron integration, probability, theory of measurement, etc. In this section, we present an application of soft set theory in a decision making problem with the help of rough approach. The problem we consider is as below. 
+
+
+Let U = $\{ h_l , h_2, h_i, h_i, h_g, h_s\}$, be a set of six houses, E = \{expensive; beautiful; wooden;
+cheap; in the green surroundings: modern; in good repair: in bad repair\} be a set of parameters.
+
+
+Consider the soft set (F, E) which describes the \emph{attractiveness of the houses}, given by (F, E) =
+\{expensive houses = 4, beautiful houses = $\{h_l, h_z, h_g, h_4, h_s, h_e\}$, wooden houses = \{$h_l, h_z, h_G$\},
+modern houses = \{ hl , hp, hs\}, in bad repair houses = \{ hz, hd, hs\}, cheap houses = \{ hl , hz, h3,h4, h5, hi\}, in good repair houses = \{ hl , h3, hG\}, in the green surroundings houses = \{ /tl, /x2, h3,lb, ho\}.
+
+
+Suppose that, Mr. X is interested to buy a house on the basis of his choice parameters ‘beautiful’,
+‘wooden’, ‘cheap!, ‘in the green surroundings’, ‘in good repair’, etc., which constitute the
+subset P = {beautiful; wooden; cheap; in the green surroundings; in good repair} of the set E.
+That means, out of available houses in U, he is to select that house which qualifies with all (or
+with maximum number of) parameters of the soft set P.
+
+The problem is to select the house which is most suitable with the choice parameters of Mr. X. The house which is most suitable for Mr. X, need not be most suitable for Mr. Y or Mr. Z as the selection is dependent upon the set of choice parameters of each buyer.
+To solve the problem, we do some theoretical characterizations of the soft set theory of
+Molodtsov, which we present below.
+\subsection{Tabular Representation of soft set}
+Consider the soft set (F, P) above on the basis of the set P of choice parameters of Mr. X. We can represent this soft set in
+a tabular form as shown below. This style of representation will be useful for storing a soft set
+in a computer memory. If h $\in$ F(E) then $h_i$ F($\in$)= 1, otherwise $h_{ij}$ = 0, where $h_{ij}$ are the entries in Figure 1.
+\begin{figure}[h!]
+  \centering
+   \includegraphics[scale=0.50]{table_1.png}
+  \caption{Table 1}
+\end{figure}
+Thus, a soft set now can be viewed as a knowledge representation system where the set of attributes is to be replaced by a set of parameters.
+
+\subsection{Reduct-Table for a Soft Set}
+Consider the soft set (F, E). Clearly, for any $P \subset E$, (F, P) is a soft subset of (F, E). We will now define a reduct-soft-set of the soft set (F, P).
+
+Consider the tabular representation of the soft set (F, P). If Q is a reduct of P, then the soft set (F, Q) is called the reduct-soft-set of the soft set (F, P).
+
+
+Intuitively, a reduct-soft-set (F, Q) of the soft set (F, P) is the essential part, which suffices to
+describe all basic approximate descriptions of the soft set (F, P).
+
+
+The core soft set of (F, P) is the soft set (I;: C)! where C is the CORE (P).
+\subsection{Choice Value for an Object $h_i$}
+The choice value of an object $h_i \in U $ is $c_i$, given by
+$$c_i = \sum_{j} h_{ij}$$
+where $h_{ij}$ are the entries in the table of the reduct-soft-set.
+
+
+\subsection{Algorithm for Selection for House}
+The following algorithm may be followed by Mr. X to select the house he wishes to buy
+\begin{enumerate}
+
+\item{} input the soft set (F, E),
+\item{} input the set P of choice parameters of Mr. X which is a subset of E,
+\item{} find all reduct-soft-sets of (F,P),
+\item{} choose one reduct-soft-set say (F, Q) of (F, P),
+\item{}find k, for which ck = maxci.
+
+\end{enumerate}
+Then $h_k$ is the optimal choice object. If k has more than one value, then any one of them
+could be chosen by Mr. X by using his option.
+
+
+Now we use the algorithm to solve our original problem.
+
+
+Clearly, from the table we see that $\{e_1,e_2,e_4,e_5\}, \{e_2,e_3,e_4,e5\}$ are the two reducts of P = $\{e_1,e_2,e_3,e_4,e_5\}$. Choose any one say, Q = $\{e_1,e_2,e_4,e_5\}$.
+
+
+Incorporating the choice values, the reduct-soft-set can be represented in Table 2 below.
+
+
+\begin{figure}[h!]
+  \centering
+   \includegraphics[scale=0.50]{table_2.png}
+  \caption{Table 2}
+\end{figure}
+
+Here max $c_i = c_i$ or $c_6$.
+Decision: Mr. X can buy either the house $h_1$ or the house $h_2$.
 
 
 \section{Conclusion}
@@ -314,38 +408,39 @@ view on the relationship between fuzzy sets and
 membership functions. Some authors treat membership
 functions as characteristic functions. In other words,
 one fuzzy set has one and only one membership
-function, in our terminology, a W-sofset. Some do not
-share this view so they can f*** off.
-
+function, in our terminology, a W-sofset.
 \begin{thebibliography}{9}
+\bibitem{paper}
+T. Y. Lin
+\emph{A set theory for soft computing} - \url{http://xanadu.cs.sjsu.edu/~tylin/publications/paperList/86_18quality9.pdf}
+
+
 \bibitem{pap}
-Katja Schmidt-Samoa, 
-\emph{A New Rabin-type Trapdoor Permutation Equivalent to Factoring and Its Applications}. TechnischeUniversit. samoa@informatik.tu-darmstadt.de
-
+Imada; Akira, 
+\emph{Introduction to Soft Computing}. \url{http://neuro.bstu.by/ai/soft-computing.pdf}
+\bibitem{pap2}
+Maji;P.K, Roy; A.R. \textit{An Application of Soft Sets in Decision Making Problem.}
+Department of Mathematics, Indian Institute of Technology, Kharagpur, India.
 \bibitem{wiki}
-  Schmidt-Samoa Cryptosystem - 
- \url{http://en.wikipedia.org/wiki/Schmidt-Samoa_cryptosystem}
-\bibitem{textbook}
- Rivest, R.; A. Shamir; L. Adleman (1978). \emph{"A Method for Obtaining Digital Signatures and Public-Key Cryptosystems"}. Communications of the ACM 21 (2): 120–126. doi:10.1145/359340.359342
-
-\bibitem{pdp} Joe Hurd, Blum Integers (1997) -  \url{http://www.gilith.com/research/talks/cambridge1997.pdf}
-\bibitem{pap}Rabin, Michael. \emph{Digitalized Signatures and Public-Key Functions as Intractable as Factorization}. MIT Laboratory for Computer Science, January 1979.
-
-\bibitem{link}Katja Schmidt-Samoa - \emph{Contributions to Provable Security and Efficient Cryptography}.\\\url{http://tuprints.ulb.tu-darmstadt.de/708/1/Diss.Schmidt-Samoa.pdf}
+ Soft Computing
+ \url{http://en.wikipedia.org/wiki/Soft-computing}
+ \bibitem{wiki}
+ Soft Sets
+ \url{http://en.wikipedia.org/wiki/Soft_set}
 \end{thebibliography}
 \newpage
-\section{Screenshots}
-\begin{figure}[h!]
-  \centering
-   \includegraphics[scale=0.50]{encrypt.png}
-  \caption{Encryption using the Schmidt-Samoa algorithm}
-\end{figure}
-
-\begin{figure}[h!]
-  \centering
-   \includegraphics[scale=0.50]{decrypt.png}
-  \caption{Decryption using the Schmidt-Samoa algorithm.}
-\end{figure}
+%\section{Screenshots}
+%\begin{figure}[h!]
+%  \centering
+%   \includegraphics[scale=0.50]{encrypt.png}
+%  \caption{Encryption using the Schmidt-Samoa algorithm}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%  \centering
+%   \includegraphics[scale=0.50]{decrypt.png}
+%  \caption{Decryption using the Schmidt-Samoa algorithm.}
+%\end{figure}
 
 
 \end{document}
